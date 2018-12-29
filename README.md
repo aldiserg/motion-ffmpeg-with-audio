@@ -5,11 +5,15 @@
 #############
 Setup
 #############
+
 apt install motion 
+
 disable motion record movie at motion.conf
 
 add to camera1.conf
+
   on_event_start motion.sh
+  
   on_event_end stop_motion.sh
 
 
