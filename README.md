@@ -1,6 +1,5 @@
 # motion-ffmpeg-with-audio
-# how it works?
-# ffmpeg write non-stop ip cam stream, motion detected scene change and start start_motion.sh. When motion is end it start stop_motion.sh which cut our movies and sava that fragment to another folder
+ffmpeg write non-stop ip cam stream, motion detected scene change and start start_motion.sh. When motion is end it start stop_motion.sh which cut our movies and sava that fragment to another folder
 
 #############
 Setup
