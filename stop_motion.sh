@@ -46,7 +46,7 @@ else
             echo "Start cutting from movie"
             ffmpeg -i "$stream_movie_dir/$movie$movie_format" -ss $movie_start_motion -qscale 0 "$tmp_movie_dir/part1$movie_format" 2> /dev/null
             ffmpeg -i "$stream_movie_dir/$movie1$movie_format" -ss 0 -t $period_to_sec_movie  -qscale 0 "$tmp_movie_dir/part2$movie_format" 2> /dev/null
-            ffmpeg -i "concat:$tmp_movie_dir/part1$movie_format|$tmp_movie_dir/part2$movie_format" -qscale 0 "$captured_movie_dir/$captured_file_name$movie_fo
+            ffmpeg -i "concat:$tmp_movie_dir/part1$movie_format|$tmp_movie_dir/part2$movie_format" -qscale $video_quality "$captured_movie_dir/$captured_file_name$movie_fo
 rmat" 2> /dev/null
             echo "New captureed movie $captured_file_name$movie_format from $movie$movie_format and $movie1$movie_format (since $movie_start_motion sec to the
  end for first movie and since start to $period_to_sec_movie sec for second movie)"
